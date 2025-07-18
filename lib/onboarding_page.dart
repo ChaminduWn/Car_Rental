@@ -9,36 +9,58 @@ class OnboardingPage extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          // Container(
-          //   decoration: const BoxDecoration(
-          //     image: DecorationImage(
-          //       image: AssetImage('assets/onboarding.png'),
-          //       fit: BoxFit.cover,
-          //     ),
-          //   ),
-          //   height: 300, // Optional: adjust height as needed
-          // ),
-          Container(
-            padding: const EdgeInsets.all(16.0),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Premium cars.\nEnjoy the luxury',
-                  style: TextStyle(
-                    color: Colors.black12,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                 
+          Expanded(
+            flex: 2,
+            child: Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/onboarding.png'),
+                  fit: BoxFit.cover,
                 ),
-                 SizedBox(height: 10),
-                  Text('Premium and prestigue car dairly rental..\n blh blh blh'
-                  , style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 16,
-                  )),
-              ],
+              ),
+              height: 300, // Optional: adjust height as needed
+            ),
+          ),
+          Expanded(
+            child: Container(
+              child:  Column(
+                 
+                children: [
+                  Text(
+                    'Premium cars.\nEnjoy the luxury',
+                    style: TextStyle(
+                      color: Colors.black12,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                   
+                  ),
+                   SizedBox(height: 10),
+                    Text('Premium and prestigue car dairly rental..\n blh blh blh'
+                    , style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16,
+                    )),
+            
+                  SizedBox(height: 20),
+                  SizedBox(
+                    width : 320,
+                    height : 54,
+                    child: ElevatedButton (
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.black,
+                        backgroundColor: Colors.white70,
+                      ),
+                      child: Text('Get Started',
+                      style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold    
+                        ),
+                      )
+                    ),
+                  ),
+            
+                ],
+              ),
             ),
           ),
         ],
