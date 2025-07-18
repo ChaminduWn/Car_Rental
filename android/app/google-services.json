@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185383061622",
+    "project_id": "chaminduwn-car-rental",
+    "storage_bucket": "chaminduwn-car-rental.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185383061622:android:a1f7881cb6f47e8fbc3757",
+        "android_client_info": {
+          "package_name": "com.example.car_rental"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzfdCaVHmgTZ1Q6exILc4W_4lwNYrzBE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
