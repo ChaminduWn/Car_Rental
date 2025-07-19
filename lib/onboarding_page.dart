@@ -15,70 +15,77 @@ class OnboardingPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          // Overlay content
-          Container(
-            padding: const EdgeInsets.all(24.0),
+
+          // Top-aligned Text
+          Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 100, left: 24, right: 24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Text(
+                    'Premium Cars..\nEnjoy the luxury',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(
+                          offset: Offset(0, 2),
+                          blurRadius: 4,
+                          color: Colors.black54,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 12),
+                  Text(
+                    'Premium and prestige car daily rental..\nExperience the luxury of driving a premium car with our daily rental service.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 16,
+                      shadows: [
+                        Shadow(
+                          offset: Offset(0, 1),
+                          blurRadius: 2,
+                          color: Colors.black45,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          // Bottom-aligned Button
+          Align(
             alignment: Alignment.bottomCenter,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text(
-                  'Premium Cars..\nEnjoy the luxury',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white, // White for better contrast
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                    shadows: [
-                      Shadow(
-                        offset: Offset(0, 2),
-                        blurRadius: 4,
-                        color: Colors.black54,
-                      ),
-                    ],
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 40),
+              child: SizedBox(
+                width: 320,
+                height: 54,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Action or navigation
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.black,
+                    backgroundColor: Colors.white,
                   ),
-                ),
-                const SizedBox(height: 12),
-                const Text(
-                  'Premium and prestige car daily rental..\nExperience the luxury of driving a premium car with our daily rental service.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 16,
-                    shadows: [
-                      Shadow(
-                        offset: Offset(0, 1),
-                        blurRadius: 2,
-                        color: Colors.black45,
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 24),
-                SizedBox(
-                  width: 320,
-                  height: 54,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Navigate or action
-                    },
-                    style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.black,
-                      backgroundColor: Colors.white,
-                    ),
-                    child: const Text(
-                      'Get Started',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  child: const Text(
+                    'Get Started',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                const SizedBox(height: 40),
-              ],
+              ),
             ),
           ),
         ],
