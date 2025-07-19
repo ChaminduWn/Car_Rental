@@ -6,61 +6,79 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-            flex: 2,
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/onboarding.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              height: 300, // Optional: adjust height as needed
+          // Background Image
+          SizedBox.expand(
+            child: Image.asset(
+              'assets/onboarding.png',
+              fit: BoxFit.cover,
             ),
           ),
-          Expanded(
-            child: Container(
-              child:  Column(
-                 
-                children: [
-                  Text(
-                    'Premium cars.\nEnjoy the luxury',
-                    style: TextStyle(
-                      color: Colors.black12,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                   
-                  ),
-                   SizedBox(height: 10),
-                    Text('Premium and prestigue car dairly rental..\n blh blh blh'
-                    , style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
-                    )),
-            
-                  SizedBox(height: 20),
-                  SizedBox(
-                    width : 320,
-                    height : 54,
-                    child: ElevatedButton (
-                      onPressed: (){},
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.black,
-                        backgroundColor: Colors.white70,
+          // Overlay content
+          Container(
+            padding: const EdgeInsets.all(24.0),
+            alignment: Alignment.bottomCenter,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  'Premium Cars..\nEnjoy the luxury',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white, // White for better contrast
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    shadows: [
+                      Shadow(
+                        offset: Offset(0, 2),
+                        blurRadius: 4,
+                        color: Colors.black54,
                       ),
-                      child: Text('Get Started',
-                      style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold    
-                        ),
-                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Text(
+                  'Premium and prestige car daily rental..\nExperience the luxury of driving a premium car with our daily rental service.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 16,
+                    shadows: [
+                      Shadow(
+                        offset: Offset(0, 1),
+                        blurRadius: 2,
+                        color: Colors.black45,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: 320,
+                  height: 54,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Navigate or action
+                    },
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.white,
+                    ),
+                    child: const Text(
+                      'Get Started',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-            
-                ],
-              ),
+                ),
+                const SizedBox(height: 40),
+              ],
             ),
           ),
         ],
