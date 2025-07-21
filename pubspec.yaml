@@ -20,6 +20,10 @@ dependencies:
   # Cloud Firestore database
   cloud_firestore: ^4.17.2
 
+  flutter_map : ^2.1.0
+
+  latlog2 : ^0.8.0
+
   # Cupertino icons for iOS style
   cupertino_icons: ^1.0.8
 
