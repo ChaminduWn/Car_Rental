@@ -10,11 +10,20 @@ class Car {
     required this.fuelCapacity,
     required this.pricePerHour,
   });
+
+  factory Car.fromMap(Map<String, dynamic> map) {
+    return Car(
+      model: map['model'] ,
+      distance: map['distance'] ,
+      fuelCapacity: map['fuelCapacity'] ,
+      pricePerHour: map['pricePerHour'] ,
+    );
+  }  
 }
 
 // 1 - domain /entities
 // 2 - domain/repositoris (interfce/contract)
-// 3 - domain/usecases (business logic)
+// 3 - domain/usecases (business logic) getCarById ,getCarByName
 
 // 4 - data /models (data transfer objects)
 // 5 - data /repositories (implementation of the repository interface)
