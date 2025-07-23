@@ -11,3 +11,11 @@ class Car {
     required this.pricePerHour,
   });
 }
+
+// 1 - domain /entities
+// 2 - domain/repositoris (interfce/contract)
+// 3 - domain/usecases (business logic)
+
+// 4 - data /models (data transfer objects)
+// 5 - data /repositories (implementation of the repository interface)
+// 6 - data /datasources (fetch api/ firebase)
