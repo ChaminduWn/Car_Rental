@@ -1,4 +1,5 @@
 import 'package:car_rental/firebase_options.dart';
+import 'package:car_rental/injection_container.dart';
 import 'package:car_rental/presentation/pages/MapsDetailsPage.dart';
 import 'package:car_rental/presentation/pages/car_details_page.dart';
 import 'package:car_rental/presentation/pages/car_list_screen.dart';
@@ -12,6 +13,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform
   );
+  initInjection();
   runApp(const MyApp());
 }
 
