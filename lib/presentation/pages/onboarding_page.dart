@@ -29,8 +29,8 @@ class OnboardingPage extends StatelessWidget {
                     'Premium Cars..\nEnjoy the luxury',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 26,
+                      color: Color(0xFF540E15) ,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
@@ -46,8 +46,8 @@ class OnboardingPage extends StatelessWidget {
                     'Premium and prestige car daily rental..\nExperience the luxury of driving a premium car with our daily rental service.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 16,
+                      color: Color.fromARGB(179, 88, 85, 85),
+                      fontSize: 20,
                       shadows: [
                         Shadow(
                           offset: Offset(0, 1),
